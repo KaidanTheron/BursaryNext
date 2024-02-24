@@ -8,10 +8,10 @@ export async function POST(req) {
     console.log(data);
 
     resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'Bursary App <onboarding@resend.dev>',
       to: data.email,
       subject: data.subject,
-      html: data.content//`${data.subtitle}\n\n${data.content}`
+      html: data.content
     });
 
     return Response.json("hello");
